@@ -4,4 +4,5 @@ export const Colors = {
   secondary: '#f7eefb',
   gray: '#ebedf1',
   black: '#27272A',
+  lightGray: '#e4e4e6',
 };

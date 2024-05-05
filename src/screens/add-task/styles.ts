@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {Colors} from '../../themes/colors';
-import {getResponsiveWidth} from '../../utils';
+import {getResponsiveHeight, getResponsiveWidth} from '../../utils';
 
 export default StyleSheet.create({
   container: {
@@ -23,14 +23,6 @@ export default StyleSheet.create({
     fontSize: 18,
     color: Colors.primary,
   },
-  taskInfoContainer: {
-    marginHorizontal: 16,
-    padding: 12,
-    marginTop: 16,
-    borderWidth: 1,
-    borderColor: Colors.primary,
-    borderRadius: 8,
-  },
   taskTitle: {
     color: Colors.primary,
     fontWeight: 'bold',
@@ -44,7 +36,6 @@ export default StyleSheet.create({
   },
   taskProgressContainer: {
     marginTop: 24,
-    paddingHorizontal: 16,
   },
   progressContainer: {
     flexDirection: 'row',
@@ -66,9 +57,8 @@ export default StyleSheet.create({
   footer: {
     position: 'absolute',
     backgroundColor: Colors.primary,
+    paddingTop: 16,
     paddingVertical: 20,
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
     bottom: 0,
@@ -79,5 +69,54 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: Colors.white,
+  },
+  inputContainer: {
+    marginTop: 16,
+    rowGap: 12,
+  },
+  label: {
+    color: Colors.primary,
+    fontWeight: '500',
+    fontSize: 14,
+  },
+  input: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: Colors.lightGray,
+    borderRadius: 8,
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+  },
+  height100: {
+    height: getResponsiveHeight(500),
+  },
+  scrollView: {
+    paddingHorizontal: 16,
+  },
+  taskProgress: {
+    marginVertical: 16,
+    color: Colors.primary,
+    fontWeight: '700',
+  },
+  addTaskContainer: {
+    marginTop: 16,
+    flexDirection: 'row',
+    flex: 1,
+    borderWidth: 1,
+    borderColor: Colors.lightGray,
+    borderRadius: 8,
+    overflow: 'hidden',
+  },
+  noBorder: {
+    borderWidth: 0,
+  },
+  addTaskProgressButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    backgroundColor: Colors.primary,
+  },
+  progressAdded: {
+    color: Colors.black,
   },
 });

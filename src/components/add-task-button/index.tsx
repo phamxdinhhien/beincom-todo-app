@@ -3,16 +3,19 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from '../../themes/colors';
 import {getResponsiveHeight, getResponsiveWidth} from '../../utils';
+import {
+  NavigationProp,
+  ParamListBase,
+  useNavigation,
+} from '@react-navigation/native';
 
-interface IAddTaskButtonProps {
-  onPress?: () => void;
-}
-
-export default function AddTaskButton({
-  onPress = () => {},
-}: IAddTaskButtonProps) {
+export default function AddTaskButton() {
+  const navigation: NavigationProp<ParamListBase> = useNavigation();
+  const goToAddTask = () => {
+    navigation.navigate('AddTaskScreen');
+  };
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity style={styles.container} onPress={goToAddTask}>
       <Ionicons
         name="add-circle"
         color={Colors.primary}
